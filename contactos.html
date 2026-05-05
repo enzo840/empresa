@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiroly Webs | Contactos</title>
+    <meta
+      name="description"
+      content="Contacta a Hiroly Webs para hablar sobre tu pagina web."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navegacion principal">
+        <a class="brand" href="index.html" aria-label="Hiroly Webs inicio">
+          <img class="brand-mark" src="logo-hiroly.png" alt="" />
+          <span class="brand-name">Hiroly Webs</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Abrir menu</span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Menu principal</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="planes.html">Planes</a>
+          <a href="contactos.html" aria-current="page">Contactos</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Contactos</p>
+        <h1>Hablemos de tu proyecto</h1>
+        <p>
+          Usa esta pagina para escribirnos directamente. Para elegir un plan,
+          entra a la seccion Planes.
+        </p>
+      </section>
+
+      <section class="section contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Contacto directo</p>
+          <h2>Estamos listos para ayudarte</h2>
+          <p>
+            Escribenos para crear una pagina web nueva, mejorar una web existente
+            o preparar una propuesta a medida.
+          </p>
+          <div class="contact-list">
+            <a href="planes.html">Ver planes</a>
+          </div>
+        </div>
+
+        <form class="contact-form quick-message" data-mail-to="seguridadc265@gmail.com">
+          <div class="quick-message-head">
+            <span class="service-icon">MSG</span>
+            <div>
+              <h3>Mensaje rapido</h3>
+              <p>Deja una idea corta y se abrira un correo listo para enviar.</p>
+            </div>
+          </div>
+          <div class="quick-fields">
+            <input type="text" name="name" placeholder="Nombre" aria-label="Nombre" required />
+            <input type="email" name="email" placeholder="Correo" aria-label="Correo" required />
+          </div>
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Quiero una pagina web para..."
+            aria-label="Que quieres hacer"
+          ></textarea>
+          <button class="button primary" type="submit">Enviar mensaje</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <a
+      class="whatsapp-bubble"
+      href="https://wa.me/56991535800"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Hablar por WhatsApp con Hiroly Webs"
+    >
+      <img src="whatsapp.svg" alt="" />
+      <span>WhatsApp</span>
+    </a>
+
+    <footer class="footer">
+      <p>Hiroly Webs. Paginas web profesionales para empresas que quieren crecer online.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiroly Webs | Planes</title>
+    <meta
+      name="description"
+      content="Paginas web profesionales a 20 dolares por modulo, sin cobro por pagina."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navegacion principal">
+        <a class="brand" href="index.html" aria-label="Hiroly Webs inicio">
+          <img class="brand-mark" src="logo-hiroly.png" alt="" />
+          <span class="brand-name">Hiroly Webs</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Abrir menu</span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Menu principal</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="planes.html" aria-current="page">Planes</a>
+          <a href="contactos.html">Contactos</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero dark">
+        <p class="eyebrow">Planes</p>
+        <h1>Planes de paginas web por modulos</h1>
+        <p>
+          Cada modulo cuesta $20 USD. Ordenamos los planes desde el mas economico
+          al mas completo para que el cliente elija con claridad.
+        </p>
+      </section>
+
+      <section class="section plans-section">
+        <div class="section-heading">
+          <p class="eyebrow">Como se calcula</p>
+          <h2>Cada modulo cuesta $20 USD</h2>
+          <p>
+            Ejemplo: si una pagina web necesita 5 modulos, el valor total es
+            5 x $20 USD = $100 USD. Las paginas no tienen cobro aparte.
+          </p>
+        </div>
+
+        <div class="plans">
+          <article class="plan">
+            <p class="plan-name">Inicio</p>
+            <h3>$20<span> USD</span></h3>
+            <ul>
+              <li>1 modulo</li>
+              <li>Ideal para una presentacion simple</li>
+              <li>Diseno adaptable a celular</li>
+              <li>Sin cobro por pagina</li>
+            </ul>
+            <button class="button plan-button order-plan" type="button" data-plan="Inicio" data-price="20" data-modules="1">Solicitar pagina web</button>
+            <p class="plan-inline-status" role="status" aria-live="polite"></p>
+          </article>
+
+          <article class="plan">
+            <p class="plan-name">Basico</p>
+            <h3>$60<span> USD</span></h3>
+            <ul>
+              <li>3 modulos incluidos</li>
+              <li>3 x $20 USD</li>
+              <li>Para webs personales o servicios pequenos</li>
+              <li>Sin cobro por pagina</li>
+            </ul>
+            <button class="button plan-button order-plan" type="button" data-plan="Basico" data-price="60" data-modules="3">Solicitar pagina web</button>
+            <p class="plan-inline-status" role="status" aria-live="polite"></p>
+          </article>
+
+          <article class="plan featured">
+            <p class="plan-badge">Mas recomendado</p>
+            <p class="plan-name">Emprendedor</p>
+            <h3>$100<span> USD</span></h3>
+            <ul>
+              <li>5 modulos incluidos</li>
+              <li>5 x $20 USD</li>
+              <li>Para emprendedores y pequenas empresas</li>
+              <li>Sin cobro adicional por pagina</li>
+            </ul>
+            <button class="button primary order-plan" type="button" data-plan="Emprendedor" data-price="100" data-modules="5">Solicitar pagina web</button>
+            <p class="plan-inline-status" role="status" aria-live="polite"></p>
+          </article>
+
+          <article class="plan">
+            <p class="plan-name">Empresa</p>
+            <h3>$160<span> USD</span></h3>
+            <ul>
+              <li>8 modulos incluidos</li>
+              <li>8 x $20 USD</li>
+              <li>Para empresas con mas secciones</li>
+              <li>Sin cobro por pagina</li>
+            </ul>
+            <button class="button plan-button order-plan" type="button" data-plan="Empresa" data-price="160" data-modules="8">Solicitar pagina web</button>
+            <p class="plan-inline-status" role="status" aria-live="polite"></p>
+          </article>
+
+          <article class="plan">
+            <p class="plan-name">Premium</p>
+            <h3>$240<span> USD</span></h3>
+            <ul>
+              <li>12 modulos incluidos</li>
+              <li>12 x $20 USD</li>
+              <li>Para proyectos mas completos</li>
+              <li>Cotizacion clara antes de iniciar</li>
+            </ul>
+            <button class="button plan-button order-plan" type="button" data-plan="Premium" data-price="240" data-modules="12">Solicitar pagina web</button>
+            <p class="plan-inline-status" role="status" aria-live="polite"></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Hiroly Webs. Paginas web profesionales para empresas que quieren crecer online.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

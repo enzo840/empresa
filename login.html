@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiroly Webs | Acceso</title>
+    <meta
+      name="description"
+      content="Inicia sesion o registra una cuenta para entrar a Hiroly Webs."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-shell">
+      <section class="auth-brand">
+        <img class="hero-logo" src="logo-hiroly.png" alt="Logo de Hiroly Webs" />
+        <p class="eyebrow">Acceso privado</p>
+        <h1>Hiroly Webs</h1>
+        <p>
+          Inicia sesion para entrar al sitio. Si aun no tienes cuenta, puedes
+          registrarte con tu nombre, correo y contrasena.
+        </p>
+      </section>
+
+      <section class="auth-card" aria-label="Formulario de acceso">
+        <div class="auth-tabs" role="tablist" aria-label="Acceso">
+          <button class="auth-tab is-active" type="button" data-auth-tab="login">Login</button>
+          <button class="auth-tab" type="button" data-auth-tab="register">Register</button>
+        </div>
+
+        <form class="auth-form is-active" data-auth-form="login">
+          <h2>Iniciar sesion</h2>
+          <label>
+            Correo
+            <input type="email" name="email" placeholder="tu@correo.com" required />
+          </label>
+          <label>
+            Contrasena
+            <input type="password" name="password" placeholder="Tu contrasena" required />
+          </label>
+          <button class="button primary" type="submit">Entrar</button>
+          <p class="auth-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <form class="auth-form" data-auth-form="register">
+          <h2>Crear cuenta</h2>
+          <label>
+            Nombre
+            <input type="text" name="name" placeholder="Tu nombre" required />
+          </label>
+          <label>
+            Correo
+            <input type="email" name="email" placeholder="tu@correo.com" required />
+          </label>
+          <label>
+            Contrasena
+            <input type="password" name="password" placeholder="Crea una contrasena" minlength="4" required />
+          </label>
+          <button class="button primary" type="submit">Registrarme</button>
+          <p class="auth-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

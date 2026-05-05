@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiroly Webs | Panel Admin</title>
+    <meta name="description" content="Panel administrativo de pedidos de Hiroly Webs." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-page">
+    <main class="admin-shell">
+      <section class="auth-card admin-login" id="admin-login">
+        <p class="eyebrow">Admin</p>
+        <h1>Panel privado</h1>
+        <p class="admin-copy">Ingresa con la cuenta administrativa para revisar pedidos.</p>
+        <form class="admin-form">
+          <label>
+            Correo o usuario
+            <input type="email" name="admin-user" value="dueno@gmai.com" required />
+          </label>
+          <label>
+            Contrasena
+            <input type="password" name="admin-password" value="dueño1616" required />
+          </label>
+          <button class="button primary" type="submit">Entrar al panel</button>
+          <p class="auth-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="admin-panel" id="admin-panel" hidden>
+        <div class="admin-panel-head">
+          <div>
+            <p class="eyebrow">Pedidos</p>
+            <h1>Panel de pedidos</h1>
+            <p>Revisa que plan quiere cada cliente y el correo con el que se registro.</p>
+          </div>
+          <button class="button secondary admin-logout" type="button">Cerrar admin</button>
+        </div>
+
+        <div class="admin-summary">
+          <article>
+            <span>Total pedidos</span>
+            <strong id="admin-total">0</strong>
+          </article>
+          <article>
+            <span>Valor potencial</span>
+            <strong id="admin-total-value">$0 USD</strong>
+          </article>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Cliente registrado</th>
+                <th>Correo registrado</th>
+                <th>Plan</th>
+                <th>Modulos</th>
+                <th>Precio</th>
+                <th>Accion</th>
+              </tr>
+            </thead>
+            <tbody id="admin-orders"></tbody>
+          </table>
+          <p class="empty-orders" id="empty-orders">Todavia no hay pedidos registrados.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
