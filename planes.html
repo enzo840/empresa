@@ -128,6 +128,41 @@
       <p>Hiroly Webs. Paginas web profesionales para empresas que quieren crecer online.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+document.querySelectorAll(".order-plan").forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    const plan = btn.dataset.plan;
+    const price = btn.dataset.price;
+    const modules = btn.dataset.modules;
+
+    const name = prompt("Tu nombre:");
+    const email = prompt("Tu correo:");
+
+    if (!name || !email) {
+      alert("Faltan datos");
+      return;
+    }
+
+    // 🧠 "Base de datos simulada"
+    const order = {
+      name,
+      email,
+      plan,
+      price,
+      modules,
+      date: new Date().toLocaleString()
+    };
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(order);
+
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    alert("Pedido guardado correctamente ✔ (simulado)");
+  });
+});
+</script>
+
   </body>
 </html>
