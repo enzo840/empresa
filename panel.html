@@ -68,6 +68,80 @@
       </section>
     </main>
 
-    <script src="script.js"></script>
+<script>
+const form = document.querySelector(".admin-form");
+const loginSection = document.getElementById("admin-login");
+const panelSection = document.getElementById("admin-panel");
+const status = document.querySelector(".auth-status");
+
+function loadOrders() {
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+  const tbody = document.getElementById("admin-orders");
+  tbody.innerHTML = "";
+
+  let total = 0;
+
+  if (orders.length === 0) {
+    document.getElementById("empty-orders").style.display = "block";
+    return;
+  } else {
+    document.getElementById("empty-orders").style.display = "none";
+  }
+
+  orders.forEach((o, index) => {
+    total += Number(o.price);
+
+    const tr = document.createElement("tr");
+
+    tr.innerHTML = `
+      <td>${o.date}</td>
+      <td>${o.name}</td>
+      <td>${o.email}</td>
+      <td>${o.plan}</td>
+      <td>${o.modules}</td>
+      <td>$${o.price}</td>
+      <td><button onclick="deleteOrder(${index})">Eliminar</button></td>
+    `;
+
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById("admin-total").textContent = orders.length;
+  document.getElementById("admin-total-value").textContent = "$" + total + " USD";
+}
+
+function deleteOrder(index) {
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+  orders.splice(index, 1);
+  localStorage.setItem("orders", JSON.stringify(orders));
+  loadOrders();
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const user = form.querySelector("input[name='admin-user']").value;
+  const pass = form.querySelector("input[name='admin-password']").value;
+
+  const ADMIN_USER = "dueno@gmai.com";
+  const ADMIN_PASS = "dueño1616";
+
+  if (user === ADMIN_USER && pass === ADMIN_PASS) {
+    loginSection.hidden = true;
+    panelSection.hidden = false;
+
+    loadOrders(); // 🔥 IMPORTANTE
+  } else {
+    status.textContent = "Credenciales incorrectas ❌";
+  }
+});
+
+document.querySelector(".admin-logout").addEventListener("click", () => {
+  panelSection.hidden = true;
+  loginSection.hidden = false;
+});
+</script>
+
   </body>
 </html>
